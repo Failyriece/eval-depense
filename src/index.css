@@ -22,18 +22,19 @@ body {
   min-height: 100vh;
 }
 
-li{
+li {
   list-style: none;
   padding: 5px 0px;
 }
 
-.box-pinky:not(:empty){
+.box-pinky:not(:empty) {
   border: 1px solid rgb(255, 167, 226);
   padding: 10px;
   border-radius: 10px;
 }
 
-select, input{
+select,
+input {
   color: rgb(255, 167, 226);
   background-color: #000;
   border: 2px solid rgb(255, 167, 226);
@@ -41,16 +42,28 @@ select, input{
   margin: 10px;
   border-radius: 4px;
 }
-input:hover, select:hover{
+
+input:hover,
+select:hover {
   border-color: rgb(160, 225, 255);
 }
-input:focus, select:focus{
+
+input:focus,
+select:focus {
   background-color: #202020;
 }
 
-input::placeholder{color: rgba(255, 255, 255, 0.74)}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.74)
+}
 
-#allDepense{
+#allDepense {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#allDepense p{
+  width: 34%;
 }
