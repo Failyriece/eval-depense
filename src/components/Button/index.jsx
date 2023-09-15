@@ -1,4 +1,5 @@
 import { useDepense } from '../../context/depense.jsx'
+import SelectCategory from '../SelectCategory';
 
 
 
@@ -8,7 +9,10 @@ function Button() {
     const test = (e) => {
         e.preventDefault();
         const raton = e.target;
-        dispatch({ type: 'add', name: raton.newname.value, price: raton.newnumber.value, category: 'Autres' });
+        dispatch({ type: 'add', name: raton.newname.value, price: raton.newnumber.value, category: raton.category.value });
+        raton.newname.value = '';
+        raton.newnumber.value = '';
+        console.log(state)
     }
     
     return (
@@ -16,6 +20,7 @@ function Button() {
             <form onSubmit={test}>
                 <input type="text" name="newname" />
                 <input type="number" name="newnumber" />
+                <SelectCategory/>
                 <input type="submit" value="Go" />
             </form>
         </>
