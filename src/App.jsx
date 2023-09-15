@@ -2,6 +2,7 @@ import './App.css'
 import DepenseProvider from './context/depense'
 import Button from './components/Button'
 import ListeDepense from './components/ListeDepense'
+import AllDepense from './components/AllDepense'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <DepenseProvider>
         <ListeDepense/>
         <Button/>
+        <AllDepense/>
       </DepenseProvider>
     </>
   )

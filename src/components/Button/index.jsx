@@ -9,7 +9,10 @@ function Button() {
     const test = (e) => {
         e.preventDefault();
         const raton = e.target;
-        dispatch({ type: 'add', name: raton.newname.value, price: raton.newnumber.value, category: raton.category.value });
+        if(raton.newname.value == '' || raton.newnumber.value == ''){
+            return
+        }
+        dispatch({ type: 'add', name: raton.newname.value, price: Number(raton.newnumber.value), category: raton.category.value });
         raton.newname.value = '';
         raton.newnumber.value = '';
     }
