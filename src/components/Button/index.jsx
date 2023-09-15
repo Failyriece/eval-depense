@@ -4,7 +4,7 @@ import SelectCategory from '../SelectCategory';
 
 
 function Button() {
-    const { state, dispatch } = useDepense();
+    const {dispatch } = useDepense();
 
     const test = (e) => {
         e.preventDefault();
@@ -12,7 +12,6 @@ function Button() {
         dispatch({ type: 'add', name: raton.newname.value, price: raton.newnumber.value, category: raton.category.value });
         raton.newname.value = '';
         raton.newnumber.value = '';
-        console.log(state)
     }
     
     return (
