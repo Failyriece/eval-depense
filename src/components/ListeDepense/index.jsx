@@ -6,7 +6,7 @@ function ListeDepense() {
 
     return (
         <>
-        <ul>
+        <ul class='box-pinky'>
             {
                 state.map((depense, index)=>{
                     return <li key={index}>{depense.name} - {depense.price}€. Catégorie: {depense.category}</li>

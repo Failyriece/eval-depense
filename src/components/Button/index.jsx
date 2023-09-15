@@ -20,10 +20,10 @@ function Button() {
     return (
         <>
             <form onSubmit={test}>
-                <input type="text" name="newname" />
-                <input type="number" name="newnumber" />
+                <input type="text" name="newname" placeholder='Nom de la dépense'/>
+                <input type="number" name="newnumber" placeholder='Prix (ex: 100)' />
                 <SelectCategory/>
-                <input type="submit" value="Go" />
+                <input type="submit" value="Valider" />
             </form>
         </>
     )
